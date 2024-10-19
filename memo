@@ -1,0 +1,5 @@
+#calculate duration for R
+
+calc_D<-function(c,y,m,n){
+  return( (1+y)/(m*y) - (1+y+n*(c-y))/(m*c*((1+y)^n-1)+m*y) )
+}
