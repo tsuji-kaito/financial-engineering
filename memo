@@ -3,3 +3,9 @@
 calc_D<-function(c,y,m,n){
   return( (1+y)/(m*y) - (1+y+n*(c-y))/(m*c*((1+y)^n-1)+m*y) )
 }
+
+#calculate bond value
+
+calc_B <- function(V, d1, d2, r, T, t, K){
+  return(V - (V * pnorm(d1)) + (exp((-1)*r*(T-t)) * K * pnorm(d2)) )
+}
